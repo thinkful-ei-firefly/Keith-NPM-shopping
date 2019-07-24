@@ -1,6 +1,6 @@
-'use strict';
 /* global shoppingList, store, api */
 import $ from 'jquery';
+import cuid from 'cuid';
 
 $(document).ready(function() {
   shoppingList.bindEventListeners();
