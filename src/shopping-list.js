@@ -2,6 +2,7 @@
 /* global store, api, $ */
 import store from './store';
 import api from './api';
+import $ from 'jquery';
 
 // eslint-disable-next-line no-unused-vars
 
@@ -61,6 +62,7 @@ import api from './api';
   
   function render() {
     renderError();
+    console.log('rendered');
 
     // Filter item list if store prop is true by item.checked === false
     let items = [ ...store.items ];
@@ -115,7 +117,7 @@ import api from './api';
           render();
         })
         .catch((err) => {
-          console.log(err);
+          console.log('1');
           store.setError(err.message);
           renderError();
         }
@@ -133,7 +135,7 @@ import api from './api';
           render();
         })
         .catch((err) => {
-          console.log(err);
+          console.log('2');
           store.setError(err.message);
           renderError();
         }
@@ -153,7 +155,7 @@ import api from './api';
           render();
         })
         .catch((err) => {
-          console.log(err);
+          console.log('3');
           store.setError(err.message);
           renderError();
         });

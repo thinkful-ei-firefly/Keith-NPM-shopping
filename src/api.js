@@ -1,6 +1,7 @@
 'use strict';
 // eslint-disable-next-line no-unused-vars
-  const BASE_URL = 'https://thinkful-list-api.herokuapp.com/rich';
+  const BASE_URL = 'https://thinkful-list-api.herokuapp.com/keith';
+  
 
   const listApiFetch = function(...args) {
     // setup var in scope outside of promise chain
@@ -29,9 +30,9 @@
         // will respond with a JSON object containing message key
         if (error) {
           error.message = data.message;
+          console.log(error.message);
           return Promise.reject(error);
         }
-
         // otherwise, return the json as normal resolved Promise
         return data;
       });

@@ -1,5 +1,6 @@
 'use strict';
 // eslint-disable-next-line no-unused-vars
+let items = [];
   const setError = function(error) {
     this.error = error;
   };
@@ -42,7 +43,8 @@
     findAndDelete: findAndDelete,
     findById: findById,
     addItem: addItem,
-    setError: setError
+    setError: setError,
+    items: items
   }
 
   

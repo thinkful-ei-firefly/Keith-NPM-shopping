@@ -12,6 +12,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "cuid": "^2.1.6",
     "jquery": "^3.4.1"
   },
   "devDependencies": {
