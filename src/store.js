@@ -1,6 +1,5 @@
 'use strict';
 // eslint-disable-next-line no-unused-vars
-const store = (function(){
   const setError = function(error) {
     this.error = error;
   };
@@ -35,20 +34,15 @@ const store = (function(){
     this.searchTerm = term;
   };
 
-  return {
-    items: [],
-    error: null,
-    hideCheckedItems: false,
-    searchTerm: '',
+  export default{
+    setSearchTerm: setSearchTerm,
+    setItemIsEditing: setItemIsEditing,
+    toggleCheckedFilter: toggleCheckedFilter,
+    findAndUpdate: findAndUpdate,
+    findAndDelete: findAndDelete,
+    findById: findById,
+    addItem: addItem,
+    setError: setError
+  }
 
-    addItem,
-    setError,
-    findById,
-    findAndDelete,
-    findAndUpdate,
-    toggleCheckedFilter,
-    setSearchTerm,
-    setItemIsEditing,
-  };
   
-}());

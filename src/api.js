@@ -1,16 +1,7 @@
 'use strict';
 // eslint-disable-next-line no-unused-vars
-const api = (function(){
   const BASE_URL = 'https://thinkful-list-api.herokuapp.com/rich';
 
-  /**
-   * listApiFetch - Wrapper function for native `fetch` to standardize error handling. 
-   * @param {string} url 
-   * @param {object} options 
-   * @returns {Promise} - resolve on all 2xx responses with JSON body
-   *                    - reject on non-2xx and non-JSON response with 
-   *                      Object { code: Number, message: String }
-   */
   const listApiFetch = function(...args) {
     // setup var in scope outside of promise chain
     let error;
@@ -78,10 +69,9 @@ const api = (function(){
     });
   };
 
-  return {
-    getItems,
-    createItem,
-    updateItem,
-    deleteItem,
-  };
-}());
+export default{
+  deleteItem: deleteItem,
+  updateItem: updateItem,
+  createItem: createItem,
+  getItems: getItems
+}

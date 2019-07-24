@@ -1,6 +1,8 @@
 /* global shoppingList, store, api */
 import $ from 'jquery';
-import cuid from 'cuid';
+import shoppingList from './shopping-list';
+import api from './api';
+
 
 $(document).ready(function() {
   shoppingList.bindEventListeners();
