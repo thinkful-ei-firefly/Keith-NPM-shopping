@@ -1,5 +1,6 @@
 'use strict';
 /* global shoppingList, store, api */
+import $ from 'jquery';
 
 $(document).ready(function() {
   shoppingList.bindEventListeners();
